@@ -1,0 +1,17 @@
+name: python-vesion
+run-name: p
+
+on: [push]
+
+jobs:
+look python
+
+run-on: ubuntu-latest
+
+steps:
+- uses: actions/checkout@v3
+- uses: actions/setup-python@v3
+  with:
+  pyton-version: "3.11"
+ - run: pip install flask
+ - run: pip -V
